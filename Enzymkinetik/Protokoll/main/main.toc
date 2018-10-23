@@ -2,4 +2,5 @@
 \babel@toc {ngerman}{}
 \contentsline {section}{\numberline {1}Einleitung}{2}
 \contentsline {section}{\numberline {2}Durchf\IeC {\"u}hrung}{2}
-\contentsline {section}{Literatur}{3}
+\contentsline {section}{\numberline {3}Datenauswertung}{3}
+\contentsline {section}{Literatur}{4}

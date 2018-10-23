@@ -7,3 +7,6 @@
 /main/*.blg
 /main/*.synctex.gz
 **/Enzymkinetik-Einleitung-Durchführung.pdf
+
+**/5mM.tex
+**/50mM.tex
