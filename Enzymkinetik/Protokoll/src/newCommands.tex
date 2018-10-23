@@ -1,0 +1,12 @@
+%\nc_bild[scale=0.5][path=../src/img/]{name}
+\newcommandx{\ncBild}[5][1=1,2=../src/img/]{
+  \begin{figure} [H]
+    \centering
+    \includegraphics[scale=#1]{#2#3}
+    \caption{#4}
+    \label{#5}
+  \end{figure}
+}
+
+%makecell
+\newcommand{\mc}{\makecell}
