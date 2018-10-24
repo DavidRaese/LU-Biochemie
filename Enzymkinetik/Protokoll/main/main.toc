@@ -1,6 +1,17 @@
 \babel@toc {ngerman}{}
 \babel@toc {ngerman}{}
-\contentsline {section}{\numberline {1}Einleitung}{2}
-\contentsline {section}{\numberline {2}Durchf\IeC {\"u}hrung}{2}
-\contentsline {section}{\numberline {3}Datenauswertung}{3}
-\contentsline {section}{Literatur}{4}
+\contentsline {section}{\numberline {1}Einleitung}{3}
+\contentsline {section}{\numberline {2}Durchf\IeC {\"u}hrung}{4}
+\contentsline {section}{\numberline {3}Datenauswertung}{5}
+\contentsline {subsection}{\numberline {3.1}Konzentrations-Zeit-Diagramm}{5}
+\contentsline {subsection}{\numberline {3.2}Reaktionsgeschwindigkeiten}{6}
+\contentsline {subsection}{\numberline {3.3}Michaelis-Menten Diagramm}{7}
+\contentsline {subsection}{\numberline {3.4}Lineweaver-Burk Diagramm}{8}
+\contentsline {subsubsection}{\numberline {3.4.1}Ermittlung des Inhibitortyps}{8}
+\contentsline {subsection}{\numberline {3.5}Dixon-Plot, Bestimmung der Inhibitorkonstante}{9}
+\contentsline {subsection}{\numberline {3.6}Bestimmung der turnover number ($k_{cat}$), der katalytischen Effizienz ($k_1$) und der spezifischen Aktivit\IeC {\"a}t}{9}
+\contentsline {subsubsection}{\numberline {3.6.1}turnover number ($k_{cat}$)}{9}
+\contentsline {subsubsection}{\numberline {3.6.2}katalytische Effizienz}{10}
+\contentsline {subsubsection}{\numberline {3.6.3}spezifische Aktivit\IeC {\"a}t}{10}
+\contentsline {section}{\numberline {4}Diskussion}{10}
+\contentsline {section}{Literatur}{11}

@@ -1,30 +1,148 @@
 \newpage
 \section{Datenauswertung}
 
-% \begin{figure}
-  
-%   \begin{minipage}{2in}
-%     \caption{Steigung von $t_0$ bis $t_{10}$ der ungehemmten Reaktion}
-%     \input{../src/tables/ungehemmt}
-%     \label{tab:ungehemmt}%
-%   \end{minipage}
-%   \hspace{2cm}
-%   \begin{minipage}{2in}
-%     \caption{Steigung von $t_0$ bis $t_{10}$ der 5mM inhibierten Reaktion}
-%     \input{../src/tables/5mM}
-%     \label{tab:5mM}%
-%   \end{minipage}
-  
-%   \begin{minipage}{2in}
-%     \caption{Steigung von $t_{10}$ bis $t_{20}$ der 50mM inhibierten Reaktion}
-%     \input{../src/tables/50mM}
-%     \label{tab:50mM}%
-%   \end{minipage}
-%   \hspace{2cm}
-%   \begin{minipage}{2in}
-%     \caption{Messwerte der ungehemmten Reaktion nach 10 min}
-%     \input{../src/tables/ungehemmt}
-%     \label{tab:ungehemmt}%
-%   \end{minipage}
-% \end{figure}
+\subsection{Konzentrations-Zeit-Diagramm}
+
+Da die Absorptionen des Produktes mit Hilfe eines Photometers gemessen worden sind, wird die Lambert-Beer Gleichung umgeformt, um die einzelnen Konzentrationen zu erhalten. Dabei wird der Verdünnungsfaktor miteinbezogen. 
+
+\begin{align}
+  \begin{split}  
+    A &= \epsilon \cdot c \cdot d \\
+    c &= F \cdot \frac{A}{\epsilon \cdot d}
+  \end{split}
+\end{align}
+
+\begin{table}[H]
+  \begin{tabular}{ll}
+    A...& Absorption \\
+    $\epsilon$... & molarer Extinktionskoeffizient $[\epsilon = 1,88 \cdot 10^4 \frac{l}{mol \cdot cm}]$ \\
+    d... & Schichtdicke $[1cm]$ \\
+    c... & Konzentration $[\frac{nmol}{ml}]$ \\
+    F... & Verdünnungsfaktor $[F = 6]$
+  \end{tabular}
+\end{table}
+
+Dadurch, dass die Zeit und die Konzentrationen graphisch aufgetragen werden, werden die Reaktionsgeschwindigkeit der jeweiligen Substratkonzentration ermittelt.
+
+\ncBild{ungehemmtKonzentrationZeit.png}{ungehmmtes Substrat}{ungehemmt}
+\ncBild[0.9]{5mMKonzentrationZeit.png}{Substrat mit 5mM Inhibitorlösung}{5mM}
+\ncBild[0.9]{50mMKonzentrationZeit.png}{Substrat mit 50mM Inhibitorlösung}{50mM}
+\ncBild[0.9]{150mMKonzentrationZeit.png}{Substrat mit 150mM Inhibitorlösung}{150mM}
+
+\subsection{Reaktionsgeschwindigkeiten}
+
+Um die Anfangsgeschwindigkeiten(siehe Tabelle \ref{tab:Messwerte}) zu erhalten, ermittelt man die Steigungen der Zeit und Konzentration.  Für die Bestimmung der Reaktionsgeschwindigkeit wurde die Absorptionszunahme im Zeitraum 0-20 min für die Konzentrationen von 5 und 50 mM und 0-10 min für die Konzentrationen von ungehemmt und 150 mM verwendet. Da bei den Konzentrationen (5 und 50 mM) die Werte nicht nachvollziehbar sind, wurde von 0 auf 20 min die Steigung gemessen. Selbiges gilt für die ungehemmte und die 150 mM Reaktion, bei der die Steigung von 0 auf 20 min berechnet  wurde.
+
 \input{../src/tables/ungehemmt}
+
+Die Anfangsgeschwindigkeiten bilden eine Grundlage für das Michaelis-Menten Diagramm, Lineweaver-Burk Diagramm und den Dixon Plot. 
+
+
+\subsection{Michaelis-Menten Diagramm}
+
+Für das Michaelis-Menten Diagramm werden die Anfangsgeschwindigkeiten gegen die Substratkonzentration graphisch aufgetragen. Dadurch kann man die Maximalgeschwindigkeit vmax und die Michaelis-Menten Konstante Km ermitteln.
+\\
+Die Maximalgeschwindigkeit entspricht dem Wert der Geschwindigkeit der Asymptote. 
+Um die Michaelis-Menten Konstante Km zu erhalten, wird die Maximalgeschwindigkeit halbiert und bei dem Wert die Substratkonzentration geschätzt. Sie entspricht der Michaelis-Menten Konstante. 
+
+\begin{align}
+  K_M = \frac{v_{max}}{2}
+\end{align}
+
+Maximalgeschwindigkeit als auch die Michaelis-Menten Konstante Km wurden händisch abgelesen (geschätzt).
+
+\ncBild[0.8]{MichaelisMentenDiagramm.png}{Michaelis-Menten-Diagramm}{MichaelisMentenDiagramm}
+
+Anmerkung: Entfernt wurden bei dem Diagramm folgende Werte, die als Ausreißer gelten: \\
+\begin{center}
+  \begin{tabular}{cc}
+    100 $\mu l$ & \makecell{bei 50 mM kein Wert, da die Spitze \\ der Kolbenhuppipette ausgelaufen ist} \\
+    & \\
+    700 $\mu l$ & bei 150 mM Ausreißer
+  \end{tabular}
+  \subsection{Lineweaver-Burk Diagramm}
+\end{center}
+
+Das Lineweaver-Burk Diagramm ist eine andere Methode, um die Michaelis-Menten Konstante $K_M$ als auch die Maximalgeschwindigkeit $v_{max}$ zu ermitteln. Dabei werden die Anfangsgeschwindigkeit gegen Substratkonzentration jeweils reziprok ($ \frac{1}{v};\frac{1}{[S]} $)aufgetragen.
+Der Schnittpunkt mit der y-Achse entspricht $\frac{1}{v_{max}}$ und der Schnittpunkt mit der x-Achse ist $\frac{-1}{K_M}$. Die Parameter wurden ebenfalls wie beim Michaelis-Menten Diagramm händisch geschätzt. 
+
+Anmerkung: Die gleichen Ausreißer (siehe MM Diagramm) wurden auch in diesem Diagramm nicht berücksichtigt
+
+\ncBild[0.8]{LineweaverBurkDiagramm.png}{Lineweaver-Burk Diagramm}{LineweaverBurkDiagramm}
+
+In der folgenden Tabelle werden die Parameter beider Methoden gegenüber gestellt:
+
+\input{../src/tables/LBvsMM}
+
+\subsubsection{Ermittlung des Inhibitortyps}
+
+Darüber hinaus gibt das Lineweaver-Burk Diagramm Auskunft über den Inhibitortyp des Inhibitors. 
+In diesem Fall handelt es sich um eine Mischung aus kompetitivem und nicht-kompetitivem Inhibitor, da weder die Maximalgeschwindigkeit noch die Michaelis-Menten Konstante über die Konzentration konstant bleiben.
+
+\subsection{Dixon-Plot, Bestimmung der Inhibitorkonstante}
+
+Um die Inhibitorkonstante $K_I$ zu ermitteln, wird die reziproke Anfangsgeschwindigkeit gegen die Inhibitorkonzentration für die Substratkonzentrationen aufgetragen. Die Inhibitorkonzentration beim Schnittpunkt der Geraden entspricht der Inhibitorkonstante $K_I$ und diese wurde händisch abgeschätzt. 
+Anmerkung: 30$\mu l$ und 50$\mu l$ Geraden wurden aufgrund großer Abweichungen entfernt.
+
+\ncBild[0.8]{DixonPlot.png}{Dixon-Plot}{DixonPlot}
+
+Da im Diagramm nicht ein exakter Schnittpunkt auftritt, liegt die Inhibitorkonstante in einem Interwall (200-300 $\frac{nmol}{ml}$).
+
+Anmerkung: Verdünnung wurde berücksichtigt.
+
+\subsection{Bestimmung der turnover number ($k_{cat}$), der katalytischen Effizienz ($k_1$) und der spezifischen Aktivität}
+
+\subsubsection{turnover number ($k_{cat}$)}
+Die Wechselzahl sagt die Anzahl von Formelumsätzen in einer gewissen Zeit in einer Katalyse, die ein Katalysator beschleunigen kann, aus.
+Die turnover number wird ermittelt, indem man die Maximalgeschwindigkeit durch die Enzymkonzentration dividiert wird. Dabei wird die uninhibierte Reaktion aus dem Michaelis-Menten Diagramm für die Berechnung entnommen. 
+
+%fehler?
+\begin{align}
+  \begin{split}
+    k_{cat} &= \frac{v_{max}}{[E]}  = \frac{13,8 \, [\frac{nmol}{ml \cdot min}]}{1,8 \cdot 10^{-8} \, [\frac{mol}{l}]}\\
+    k_{cat} &= 7,8 \cdot 10^2 \, min^{-1} 
+  \end{split}
+\end{align}
+
+\begin{table}[H]
+  \begin{tabular}{lll}
+    $k_{cat}$...& turnover number $[min^{-1}]$ & \\
+    $v_{max}$... & Maximalgeschwindigkeit $[\frac{nmol}{ml \cdot min}]$ & $v_{max} = 13,8 \frac{nmol}{ml \cdot min}$\\
+    E... & Enzymkonzentration $[\frac{mol}{l}]$ & $[E] = 1,8 \cdot 10^{-8} \frac{mol}{l}$ \\
+  \end{tabular}
+\end{table}
+
+\subsubsection{katalytische Effizienz}
+
+Der $K_M$-Wert wird wie in 3.6.1 für die uninhibierte Reaktion genommen.
+\begin{align}
+  \begin{split}
+    k_1 &= \frac{k_{cat}}{K_M} \\
+    k_1 &= 5,6 \cdot 10^7 \frac{l}{mol \cdot min}
+  \end{split}
+\end{align}
+
+\begin{table}[H]
+  \begin{tabular}{lll}
+    $k_{1}$...& katalytische Effizienz $[\frac{ml}{mol \cdot min}]$ & \\
+    $K_M$... & Michaelis-Menten Konstante $\frac{nmol}{ml}$ \\
+  \end{tabular}
+\end{table}
+
+\subsubsection{spezifische Aktivität}
+Die Spezifische Aktivität gibt die Wirksamkeit eines Enzyms an beziehungsweise die Umsetzung der Menge eines Substrats in einem bestimmten Zeitraum. \\
+Die Maximalgeschwindigkeit wird wie in 6.1 für die uninhibierte Reaktion genommen. 
+
+\begin{align}
+  \begin{split} 
+    A_s &= \frac{v_{max}}{m_{Protein}} \\
+    A_s &= 7,0 \frac{\mu mol}{mg \cdot min}
+  \end{split}
+\end{align}
+
+\begin{table}[H]
+  \begin{tabular}{lll}
+    $m_{Protein}$...& Proteinmenge in Reaktionslösung $[0,02 \, \frac{mg}{ml}]$ & \\
+    $A_s$... & spezifische Aktivität $\frac{\mu mol}{mg \cdot min}$ \\
+  \end{tabular}
+\end{table}
