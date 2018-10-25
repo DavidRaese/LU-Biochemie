@@ -1,6 +1,15 @@
 \newpage
 \section{Datenauswertung}
 
+\subsection{Daten}
+
+In diesem Unterabschnitt sind alle erhaltenen Messungen  abgebildet.
+
+\input{../src/tables/ungehemmt}
+\input{../src/tables/5mM}
+\input{../src/tables/50mM}
+\input{../src/tables/150mM}
+
 \subsection{Konzentrations-Zeit-Diagramm}
 
 Da die Absorptionen des Produktes mit Hilfe eines Photometers gemessen worden sind, wird die Lambert-Beer Gleichung umgeformt, um die einzelnen Konzentrationen zu erhalten. Dabei wird der Verdünnungsfaktor miteinbezogen. 
@@ -30,17 +39,18 @@ Dadurch, dass die Zeit und die Konzentrationen graphisch aufgetragen werden, wer
 \ncBild[0.9]{150mMKonzentrationZeit.png}{Substrat mit 150mM Inhibitorlösung}{150mM}
 
 \subsection{Reaktionsgeschwindigkeiten}
+Um die Anfangsgeschwindigkeiten zu erhalten, ermittelt man die Steigung der Gerade  welche die Zunahme der Konzentration über die Zeit wiederspiegelt. Für die Reaktionen ungehemmt und gehemmt 150 mM wurden dafür die Werte der Konzentration bei 0 und 10 Minuten, bei gehemmt 50 mM und gehemmt 5 mM die Werte der Konzentration bei 0 und 20 min herangezogen.
 
-Um die Anfangsgeschwindigkeiten(siehe Tabelle \ref{tab:Messwerte}) zu erhalten, ermittelt man die Steigungen der Zeit und Konzentration.  Für die Bestimmung der Reaktionsgeschwindigkeit wurde die Absorptionszunahme im Zeitraum 0-20 min für die Konzentrationen von 5 und 50 mM und 0-10 min für die Konzentrationen von ungehemmt und 150 mM verwendet. Da bei den Konzentrationen (5 und 50 mM) die Werte nicht nachvollziehbar sind, wurde von 0 auf 20 min die Steigung gemessen. Selbiges gilt für die ungehemmte und die 150 mM Reaktion, bei der die Steigung von 0 auf 20 min berechnet  wurde.
+% Um die Anfangsgeschwindigkeiten(siehe Tabelle \ref{tab:Messwerte}) zu erhalten, ermittelt man die Steigungen der Zeit und Konzentration.  Für die Bestimmung der Reaktionsgeschwindigkeit wurde die Absorptionszunahme im Zeitraum 0-20 min für die Konzentrationen von 5 und 50 mM und 0-10 min für die Konzentrationen von ungehemmt und 150 mM verwendet. Da bei den Konzentrationen (5 und 50 mM) die Werte nicht nachvollziehbar sind, wurde von 0 auf 20 min die Steigung gemessen. Selbiges gilt für die ungehemmte und die 150 mM Reaktion, bei der die Steigung von 0 auf 20 min berechnet  wurde.
 
-\input{../src/tables/ungehemmt}
+\input{../src/tables/v0}
 
 Die Anfangsgeschwindigkeiten bilden eine Grundlage für das Michaelis-Menten Diagramm, Lineweaver-Burk Diagramm und den Dixon Plot. 
 
 
 \subsection{Michaelis-Menten Diagramm}
 
-Für das Michaelis-Menten Diagramm werden die Anfangsgeschwindigkeiten gegen die Substratkonzentration graphisch aufgetragen. Dadurch kann man die Maximalgeschwindigkeit vmax und die Michaelis-Menten Konstante Km ermitteln.
+Für das Michaelis-Menten Diagramm werden die Anfangsgeschwindigkeiten gegen die Substratkonzentration graphisch aufgetragen. Dadurch kann man die Maximalgeschwindigkeit $v_{max}$ und die Michaelis-Menten Konstante Km ermitteln.
 \\
 Die Maximalgeschwindigkeit entspricht dem Wert der Geschwindigkeit der Asymptote. 
 Um die Michaelis-Menten Konstante Km zu erhalten, wird die Maximalgeschwindigkeit halbiert und bei dem Wert die Substratkonzentration geschätzt. Sie entspricht der Michaelis-Menten Konstante. 
@@ -86,14 +96,14 @@ Anmerkung: 30$\mu l$ und 50$\mu l$ Geraden wurden aufgrund großer Abweichungen 
 
 \ncBild[0.8]{DixonPlot.png}{Dixon-Plot}{DixonPlot}
 
-Da im Diagramm nicht ein exakter Schnittpunkt auftritt, liegt die Inhibitorkonstante in einem Interwall (200-300 $\frac{nmol}{ml}$).
+Da im Diagramm nicht ein exakter Schnittpunkt auftritt, liegt die Inhibitorkonstante in einem Intervall (200-300 $\frac{nmol}{ml}$).
 
 Anmerkung: Verdünnung wurde berücksichtigt.
 
 \subsection{Bestimmung der turnover number ($k_{cat}$), der katalytischen Effizienz ($k_1$) und der spezifischen Aktivität}
 
 \subsubsection{turnover number ($k_{cat}$)}
-Die Wechselzahl sagt die Anzahl von Formelumsätzen in einer gewissen Zeit in einer Katalyse, die ein Katalysator beschleunigen kann, aus.
+Die Wechselzahl ist ein Maß für die Anzahl von Formelumsätzen in einer gewissen Zeit in einer Katalyse, die ein Katalysator beschleunigen kann.
 Die turnover number wird ermittelt, indem man die Maximalgeschwindigkeit durch die Enzymkonzentration dividiert wird. Dabei wird die uninhibierte Reaktion aus dem Michaelis-Menten Diagramm für die Berechnung entnommen. 
 
 %fehler?
